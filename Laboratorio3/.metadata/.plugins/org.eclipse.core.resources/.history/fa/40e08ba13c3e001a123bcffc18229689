@@ -1,0 +1,16 @@
+import javax.swing.JOptionPane;
+
+import java.util.Scanner;
+
+public class Agenda {
+    static Contacto [] listaContac = new Contacto[10];
+    
+    public static void main(String[] args){
+        listaContac[0]= new Contacto("Alex",25,1500.00);
+        
+    }
+    public void eliminarContac(int indice){
+        listaContac[indice]=null;
+    }
+
+}

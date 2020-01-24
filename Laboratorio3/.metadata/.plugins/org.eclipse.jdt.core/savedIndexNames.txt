@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\AMEJ\Desktop\Algoritmica P2\Algoritmica ll\Laboratorio3\.metadata\.plugins\org.eclipse.jdt.core
+3301192017.index
+2215481688.index
