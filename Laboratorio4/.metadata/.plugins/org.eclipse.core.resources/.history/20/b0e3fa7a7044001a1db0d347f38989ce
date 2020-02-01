@@ -1,0 +1,27 @@
+package prob10;
+
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+  	   System.out.print("Digite su nombre: ");
+    	
+    	registro();
+    	
+    }
+    public static void registro() {
+    	String nomb;
+    	String direcc;
+    	int telf;
+    Scanner entrada= new Scanner(System.in);
+       entrada.nextLine();
+ 	   System.out.print("Digite su nombre: ");
+ 	   nomb = entrada.nextLine();
+ 	   System.out.print("Digite su direccion: ");
+ 	   direcc= entrada.nextLine();
+ 	   System.out.print("Digite su telefono: ");
+ 	   telf= entrada.nextInt();
+ 	   Persona per = new Persona(nomb,direcc,telf);
+    }
+    
+}

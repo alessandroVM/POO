@@ -1,0 +1,86 @@
+package prob10;
+
+import java.util.Scanner;
+
+public class Prestamo {
+  private int fechaP;
+  private int plazo;
+  private int codPre;
+  Persona p;
+  Scanner entrada = new Scanner(System.in);
+public Prestamo(int fechaP, int plazo, int codPre) {
+	this.fechaP = fechaP;
+	this.plazo = plazo;
+	this.codPre = codPre;
+}
+public int getFechaP() {
+	return fechaP;
+}
+public void setFechaP(int fechaP) {
+	this.fechaP = fechaP;
+}
+public int getPlazo() {
+	return plazo;
+}
+public void setPlazo(int plazo) {
+	this.plazo = plazo;
+}
+public int getCodPre() {
+	return codPre;
+}
+public void setCodPre(int codPre) {
+	this.codPre = codPre;
+}
+
+  public void registroLib(Libro lib[]) {
+
+	  String titulo;
+	  int codLib;
+	  char estado;
+	 p.registro();
+	  for(int i=0;i<lib.length;i++) {
+		  entrada.nextLine();
+		  System.out.println("\nLibro ["+(i+1)+"]");
+		  System.out.print("Nombre: ");
+		  titulo = entrada.nextLine();
+		  codLib= i+1;
+		  System.out.print("estado [D/N] : ");
+		  estado = entrada.nextLine().charAt(0);
+		  lib[i] = new Libro(titulo,codLib,estado);
+	  }
+	  System.out.print("Digite el codigo del libro ");
+	  int codA = entrada.nextInt();
+	  hacerPed(lib,codA);
+  }
+
+  public void hacerPed(Libro lib[],int codA){
+	  Prestamo pres;
+	  if(lib[codA].getCodLib()=='D' || lib[codA].getCodLib()=='d') {
+		  for(int i=0;i<lib.length;i++) {
+			  if(codA==lib[i].getCodLib()) {
+				  System.out.print("Titulo : "+lib[i].getTitulo());
+				  System.out.print("Digite la fecha de hoy: ");
+				  fechaP=entrada.nextInt();
+				  System.out.print("Digite el plazo(dias) : ");
+				  plazo = entrada.nextInt();
+				  codPre=i+1;
+				  mostrarD(lib,codA);
+			  }else {
+				  System.out.print("Codigo invalido...");
+			  }
+		  }
+		  
+	  }else {
+		  System.out.print("Libro no disponible");
+	  }
+	 
+  }
+  public void mostrarD(Libro lib[],int codA) {
+	  entrada.nextLine();
+	  System.out.println("\nPrestamo Aceptado");
+	  System.out.print("Titulo: "+lib[codA].getCodLib());
+	  System.out.print("Fecha de prestamo: "+ fechaP);
+	  System.out.print("Plazo : "+plazo);
+	  System.out.print("Nombre : "+p.getNomb());
+  }
+}

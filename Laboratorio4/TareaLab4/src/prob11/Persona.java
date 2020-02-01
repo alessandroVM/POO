@@ -1,0 +1,47 @@
+package prob11;
+
+import java.util.Scanner;
+
+public class Persona {
+  private String nomb,padre,madre;
+  private int edad;
+  Scanner entrada = new Scanner(System.in);
+
+public Persona(String nomb, String padre, String madre, int edad) {
+	super();
+	this.nomb = nomb;
+	this.padre = padre;
+	this.madre = madre;
+	this.edad = edad;
+}
+public String getNomb() {
+	return nomb;
+}
+public void setNomb(String nomb) {
+	this.nomb = nomb;
+}
+public String getPadre() {
+	return padre;
+}
+public void setPadre(String padre) {
+	this.padre = padre;
+}
+public String getMadre() {
+	return madre;
+}
+public void setMadre(String madre) {
+	this.madre = madre;
+}
+public int getEdad() {
+	return edad;
+}
+public void setEdad(int edad) {
+	this.edad = edad;
+}
+@Override
+public String toString() {
+	System.out.println();
+	return "Persona [nomb=" + nomb + ", padre=" + padre + ", madre=" + madre + ", edad=" + edad + "]";
+}
+
+}  

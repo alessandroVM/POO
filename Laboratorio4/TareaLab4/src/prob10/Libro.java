@@ -1,0 +1,36 @@
+package prob10;
+
+public class Libro {
+  private String titulo;
+  private int codLib;
+  private char estado;
+public Libro() {
+	
+}
+public String getTitulo() {
+	return titulo;
+}
+public void setTitulo(String titulo) {
+	this.titulo = titulo;
+}
+public int getCodLib() {
+	return codLib;
+}
+public void setCodLib(int codLib) {
+	this.codLib = codLib;
+}
+public char getEstado() {
+	return estado;
+}
+public void setEstado(char estado) {
+	this.estado = estado;
+}
+  public String verEstado(char estado) {
+    if(estado=='D'|| estado=='d') {
+    	return "Disponible";
+    }else {
+    	return "No disponible";
+    }
+  }
+  
+}
